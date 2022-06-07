@@ -1,0 +1,9 @@
+.my-cart__items { 
+  opacity: 1;
+  transition: opacity .2s;
+}
+ 
+/* Make the area with controls visually disabled */
+body.js-ajax-cart-request-in-progress .my-cart__items {
+  opacity: .7;
+}

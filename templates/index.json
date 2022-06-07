@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "menu": {
+      "type": "menu",
+      "block_order": []
+    }
+  },
+  "order": [
+    "menu"
+  ]
+}

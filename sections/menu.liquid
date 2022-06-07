@@ -1,0 +1,34 @@
+{{ 'menu.css' | asset_url | stylesheet_tag }}
+
+<div class="menu-wrapper">
+  <div class="menu-wrapper__menu-buttom">
+    Menu Button
+  </div>
+  <div class="menu-wrapper__menu-logo">
+    <img src="{{ section.settings.menu_logo | img_url}}">
+  </div>
+  <div class="menu-wrapper__menu-cart">
+    Login / My Account
+    Cart
+    <a href="{{ routes.cart_url }}"
+      data-ajax-cart-toggle-class-button="js-my-cart-open">
+      My Cart
+    </a>
+    <button data-ajax-cart-toggle-class-button="js-my-cart-open | add">
+      Open cart
+    </button>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Menu",
+    "settings": [
+      {
+        "id": "menu_logo",
+        "type": "image_picker",
+        "label": "Menu Logo"
+      }
+    ]
+  }
+{% endschema %}
