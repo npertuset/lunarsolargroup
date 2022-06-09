@@ -14,6 +14,7 @@ const MenuWrapper = styled.div`
   width: 50%;
   background-color: white;
   padding: 8px 0 0 15px;
+  z-index: 1000;
 
   @media (max-width: ${mobileBreakpoint}) {
     width: 100%;

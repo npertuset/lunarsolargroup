@@ -2,9 +2,9 @@
   <head>
     <title>Space Race</title>
     {% render 'meta-tags'%}
-
+    
     <link rel="stylesheet" href="{{ 'global.css' | asset_url }}" >
-    <link rel="stylesheet" href="{{ 'fonts.css' | asset_url }}" >
+    <link rel="stylesheet" href="{{ 'fonts.css' | asset_url }}" crossorigin>
  
     {% comment %} Taken from https://liquid-ajax-cart.js.org/guide/ {% endcomment %}
     <script type="application/json" data-ajax-cart-initial-state >

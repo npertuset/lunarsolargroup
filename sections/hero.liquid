@@ -1,24 +1,28 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
 
-<div class="hero-wrapper"  {% if section.settings.hero_image %} style="background-image: url('{{ section.settings.hero_image | img_url: '2048x' }}')" {% endif %}>
+<div class="hero__wrapper"  {% if section.settings.hero_image %} style="background-image: url('{{ section.settings.hero_image | img_url: '2048x' }}')" {% endif %}>
+    <div class="hero__content">
+        <h1 class="hero__title1">{{ section.settings.large_text_1 }}</h1>
+        <h1 class="hero__title2">{{ section.settings.large_text_2 }}</h1>
+        <p class="hero__subtitle">{{ section.settings.sub_title }}</p>
+        <p class="hero__smalltext">{{ section.settings.small_text }}</p>
+        <a href="{{ section.settings.button_url }}" class="hero__button">{{ section.settings.button_text }}</a>
+    </div>
+</div>
 
-  <div class="menu-wrapper">
-    {% comment %} <div id="ajax-cart-side" class="ajax-cart-side"></div> {% endcomment %}
-    <menuv>
-    <div class="menu-wrapper__menu-buttom">
-      {% include 'react-menu' %}
-    </div>
-  </menuv>
-    <div class="menu-wrapper__menu-logo">
-      <img src="{{ section.settings.menu_logo | img_url}}">
-    </div>
-    <div class="menu-wrapper__menu-cart">
-      <a href="{{ routes.cart_url }}"
-        data-ajax-cart-toggle-class-button="js-my-cart-open">
-        <img src="{{ 'cart.svg' | asset_url }}">
-      </a>
-    </div>
+<div class="menu-wrapper">
+  <div class="menu-wrapper__menu-buttom">
+    {% include 'react-menu' %}
+  </div>
+  <div class="menu-wrapper__menu-logo">
+    <img src="{{ section.settings.menu_logo | img_url}}">
+  </div>
+  <div class="menu-wrapper__menu-cart">
+    <a href="{{ routes.cart_url }}"
+      data-ajax-cart-toggle-class-button="js-my-cart-open">
+      <img src="{{ 'cart.svg' | asset_url }}">
+    </a>
   </div>
 </div>
 
@@ -35,6 +39,36 @@
         "id": "hero_image",
         "type": "image_picker",
         "label": "Hero Image"
+      },
+      {
+        "id": "large_text_1",
+        "type": "text",
+        "label": "Large Text"
+      },
+       {
+        "id": "large_text_2",
+        "type": "text",
+        "label": "Large Text 2 (Styled)"
+      },
+      {
+        "id": "sub_title",
+        "type": "text",
+        "label": "Sub Title"
+      },
+      {
+        "id": "small_text",
+        "type": "text",
+        "label": "Small Title"
+      },
+      {
+        "id": "button_text",
+        "type": "text",
+        "label": "Button Text"
+      },
+      {
+        "id": "button_url",
+        "type": "text",
+        "label": "Button URL"
       }
     ]
   }
