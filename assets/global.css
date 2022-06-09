@@ -2,3 +2,9 @@ body {
   padding: 0;
   margin: 0;
 }
+
+
+.my-floating-cart { display: none; }
+
+/* Show the floating cart if the 'js-my-cart-open' CSS class exists */
+.js-my-cart-open .my-floating-cart { display: block; }

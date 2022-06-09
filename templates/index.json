@@ -1,11 +1,14 @@
 {
   "sections": {
-    "menu": {
-      "type": "menu",
-      "block_order": []
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "menu_logo": "shopify:\/\/shop_images\/Object.png",
+        "hero_image": "shopify:\/\/shop_images\/img.jpg"
+      }
     }
   },
   "order": [
-    "menu"
+    "hero"
   ]
 }

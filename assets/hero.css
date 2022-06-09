@@ -1,0 +1,48 @@
+.hero-wrapper {
+  height: 70vh;
+  position: relative;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1600px) {
+  .hero-wrapper {
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1740px) {
+  .hero-wrapper {
+    height: 79vh;
+  }
+}
+
+@media only screen and (min-width: 1741px) and (max-width: 1899px) {
+  .hero-wrapper {
+    height: 84vh;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .hero-wrapper {
+    height: 90vh;
+  }
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 5px 18px;
+}
+
+.menu-wrapper__menu-buttom img {
+  max-height: 42px;
+}
+
+.menu-wrapper__menu-logo img {
+  max-height: 45px;
+}
+
+.menu-wrapper__menu-cart img {
+  max-height: 23px;
+}

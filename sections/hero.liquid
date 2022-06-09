@@ -1,0 +1,41 @@
+{{ 'hero.css' | asset_url | stylesheet_tag }}
+
+
+<div class="hero-wrapper"  {% if section.settings.hero_image %} style="background-image: url('{{ section.settings.hero_image | img_url: '2048x' }}')" {% endif %}>
+
+  <div class="menu-wrapper">
+    {% comment %} <div id="ajax-cart-side" class="ajax-cart-side"></div> {% endcomment %}
+    <menuv>
+    <div class="menu-wrapper__menu-buttom">
+      {% include 'react-menu' %}
+    </div>
+  </menuv>
+    <div class="menu-wrapper__menu-logo">
+      <img src="{{ section.settings.menu_logo | img_url}}">
+    </div>
+    <div class="menu-wrapper__menu-cart">
+      <a href="{{ routes.cart_url }}"
+        data-ajax-cart-toggle-class-button="js-my-cart-open">
+        <img src="{{ 'cart.svg' | asset_url }}">
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "id": "menu_logo",
+        "type": "image_picker",
+        "label": "Menu Logo"
+      },
+      {
+        "id": "hero_image",
+        "type": "image_picker",
+        "label": "Hero Image"
+      }
+    ]
+  }
+{% endschema %}

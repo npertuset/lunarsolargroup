@@ -1,3 +1,15 @@
+/* Taking from https://liquid-ajax-cart.js.org/guide/ */
+
+.my-cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  border: 5px solid red;
+  width: 300px;
+  background-color: #fff;
+}
+
 .my-cart__items { 
   opacity: 1;
   transition: opacity .2s;

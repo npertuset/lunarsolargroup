@@ -1,3 +1,4 @@
+// Taking from https://liquid-ajax-cart.js.org/guide/
 var t = {
     d: (e, r) => {
       for (var o in r)
